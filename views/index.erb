@@ -1,14 +1,14 @@
-<h1>Welcome to Mastermind</h1>
+<header class="group">
+  <h1>Welcome to Mastermind!</h1>
+</header>
+
+<h2>Please chose whom you want to be:</h2>
 <form action="/" method="POST">
-  <legend>Please chose whom you want to be:</legend>
   <label>
-    <input type="radio" name="role" value="codebreaker" checked>Codebreaker
+    <input type="radio" name="role" value="codebreaker" checked><span>Codebreaker</span>
   </label>
   <label>
-    <input type="radio" name="role" value="codemaker">Codemaker
+    <input type="radio" name="role" value="codemaker"><span>Codemaker</span>
   </label>
   <input type="submit" value="Select">
 </form>
-
-<a href="/codebreaker">Codebreaker</a>
-<a href="/codemaker">Codemaker</a>

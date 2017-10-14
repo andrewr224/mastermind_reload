@@ -69,7 +69,7 @@ get '/game_over' do
   if game.master.victory?
     @message = "The code has been broken!"
   else
-    @message = "The codebreaker failed."
+    @message = "Codebreaker failed."
   end
   erb :game_over
 end

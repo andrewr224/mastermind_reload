@@ -1,11 +1,31 @@
-<h1>The game is over</h1>
-<h1><%= @message %></h1>
+<header>
+  <h1>The game is over!</h1>
+  <h1><%= @message %></h1>
+</header>
 
-<p>The code was <%= @code %></p>
+<h2>The code was:</h2>
+<div class="row">
+  <% @code.each do |color| %>
+    <span class="color <%= color %>"></span>
+  <% end %>
+</div>
 
-<h1>The board:</h1>
+<h2>The board:</h2>
 <% @board.each do |guess| %>
-  <p><%= guess[0] %> <small><%= guess[1] %></small></p>
+  <div class="row">
+    <% guess[0].each do |color| %>
+      <span class="color <%= color %>"></span>
+    <% end %>
+    <span class="hint">
+      <% guess[1].each do |hint| %>
+        <% if hint == "+" %>
+          <%= "&squf;" %>
+        <% elsif hint == "-" %>
+          <%= "&EmptyVerySmallSquare;" %>
+        <% end %>
+      <% end %>
+    </span>
+  </div>
 <% end %>
 
 <a href="/">Play again!</a>

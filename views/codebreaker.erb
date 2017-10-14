@@ -1,4 +1,22 @@
-<p>The board <%= @board %></p>
+<h2>The board:</h2>
+<% @board.each do |guess| %>
+  <div class="row">
+    <% guess[0].each do |color| %>
+      <span class="color <%= color %>"></span>
+    <% end %>
+    <span class="hint">
+      <% guess[1].each do |hint| %>
+        <% if hint == "+" %>
+          <%= "&squf;" %>
+        <% elsif hint == "-" %>
+          <%= "&EmptyVerySmallSquare;" %>
+        <% end %>
+      <% end %>
+    </span>
+  </div>
+<% end %>
+
+<h2>Please select your guesses:</h2>
 
 <form action="/codebreaker" method="POST">
   <select name="first">
@@ -45,4 +63,4 @@
 </form>
 
 
-<a href="/">back</a>
+<a href="/">Start over</a>
