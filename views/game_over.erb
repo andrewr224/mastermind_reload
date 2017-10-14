@@ -1,0 +1,11 @@
+<h1>The game is over</h1>
+<h1><%= @message %></h1>
+
+<p>The code was <%= @code %></p>
+
+<h1>The board:</h1>
+<% @board.each do |guess| %>
+  <p><%= guess[0] %> <small><%= guess[1] %></small></p>
+<% end %>
+
+<a href="/">Play again!</a>
