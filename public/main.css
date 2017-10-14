@@ -60,12 +60,6 @@ body {
   color: #333;
 }
 
-.group {
-  margin: 0 auto;
-  margin-top: 23px;
-  max-width: 600px;
-}
-
 header {
   height: 88px;
 }
@@ -88,6 +82,9 @@ h2 {
 section {
   padding: 43px 25px 50px 50px;
   box-shadow: 0 5px 10px #2F4F4F;
+  margin: 23px auto 60px auto;
+  margin-top: 23px;
+  max-width: 600px;
 }
 
 input[type=submit] {
